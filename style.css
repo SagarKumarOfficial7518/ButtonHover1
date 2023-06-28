@@ -1,0 +1,41 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+}
+
+a {
+  font-size: 8vh;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #00FFD4;
+  border: 2px solid #00FFD4;
+  padding: 20px;
+  position: relative; 
+  transition: 0.4s linear;
+  overflow: hidden;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #00FFD4;
+  top: 0px;
+  left: 100%;
+  transition: 0.4s linear;
+  z-index: -1;
+}
+
+a:hover:before {
+  left: 0px;
+}
+
+a:hover {
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  font-size: 9vh;
+}
